@@ -12,7 +12,7 @@ class StyledButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
-        border: Border.fromBorderSide(BorderSide(width: 2)),
+        color: Color(0xff38b750),
         borderRadius: BorderRadius.all(
           Radius.circular(24),
         ),
@@ -20,7 +20,13 @@ class StyledButton extends StatelessWidget {
       width: 300,
       child: Padding(
         padding: const EdgeInsets.all(12.0),
-        child: Center(child: StyledText(label: label, size: 16)),
+        child: Center(
+          child: StyledText(
+            label: label,
+            size: 16,
+            color: Colors.white,
+          ),
+        ),
       ),
     );
   }

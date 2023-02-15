@@ -1,8 +1,12 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:project_3/pages/Offers_page.dart';
 import 'package:project_3/pages/food_page.dart';
 import 'package:project_3/pages/profile_page.dart';
 import 'package:project_3/pages/search_page.dart';
+
+import '../models/category_model.dart';
+import '../models/restaurant_model.dart';
 
 class NavBar extends StatefulWidget {
   const NavBar({super.key});

@@ -3,12 +3,14 @@ import '../styled_text.dart';
 import '../../models/category_model.dart';
 
 class FoodCuisine extends StatelessWidget {
+  final List<CategoryModel> categories;
   const FoodCuisine({
-    super.key,
+    super.key, required this.categories,
   });
 
   @override
   Widget build(BuildContext context) {
+    
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Row(children: [

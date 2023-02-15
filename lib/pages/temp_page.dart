@@ -87,8 +87,8 @@ class _TempPageState extends State<TempPage> {
                 final RestaurantModel res = RestaurantModel(
                   id: ID.text,
                   minOrderPrice: int.parse(minOrderPrice.text),
-                  lat: double.parse(lat.text),
-                  long: double.parse(long.text),
+                  // lat: lat.text,
+                  // long: long.text,
                   categoryID: categoryID.text,
                   subCategory: subCategory.text,
                   name: name.text,

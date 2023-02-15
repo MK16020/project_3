@@ -1,7 +1,5 @@
-
 import 'package:flutter/material.dart';
-
-import '../styled_text.dart';
+import 'package:project_3/models/restaurant_model.dart';
 
 class RestaurantIcons extends StatelessWidget {
   const RestaurantIcons({
@@ -16,16 +14,19 @@ class RestaurantIcons extends StatelessWidget {
         padding: const EdgeInsets.all(8),
         color: Colors.white,
         child: Row(children: [
-          Container(
-            padding: const EdgeInsets.all(8),
-            decoration: const BoxDecoration(
-              border: Border.fromBorderSide(BorderSide(color: Colors.grey, width: 1)),
-              borderRadius: BorderRadius.all(Radius.circular(20)),
+          for (final restaurant in RestaurantModel.restaurant)
+            Container(
+              padding: const EdgeInsets.all(8),
+              decoration: const BoxDecoration(
+                border: Border.fromBorderSide(BorderSide(color: Colors.grey, width: 1)),
+                borderRadius: BorderRadius.all(Radius.circular(20)),
+              ),
+              width: 90,
+              height: 90,
+              child: Image(
+                image: NetworkImage(restaurant.imageUrl),
+              ),
             ),
-            width: 90,
-            height: 90,
-            child: StyledText(label: 'label', size: 16),
-          ),
         ]),
       ),
     );
